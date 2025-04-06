@@ -1,0 +1,30 @@
+{{define "body"}}
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">admin</th>
+            <td>Дамир</td>
+            <td>jeneksero@gmail.com</td>
+            <td>+7(987)816-65-33</td>
+        </tr>
+        {{ range . }}
+            <tr>
+                <th scope="row">user</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Email }}</td>
+                <td>{{ .Phone }}</td>
+            </tr>
+        {{ end }}
+    </tbody>
+</table>
+
+{{end}}
